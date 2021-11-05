@@ -17,23 +17,23 @@ Books.init(
     },
     author: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     pages: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
-      allowNull: true
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
     image: {
       type: DataTypes.STRING,
       allowNull: true,
       validate: {
-        isUrl: true
-      }
-    }
+        isUrl: true,
+      },
+    },
   },
   {
     sequelize,

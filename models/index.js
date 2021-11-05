@@ -2,22 +2,20 @@ const User = require("./User");
 const UserBooks = require("./UserBooks");
 const Books = require("./Books");
 
-User.hasMany(UserBooks, {
+User.belongsToMany(Books, {
   foreignKey: "user_id",
-  onDelete: "CASCADE"
+  through: {
+    model: UserBooks,
+    unique: false,
+  },
 });
 
-UserBooks.belongsTo(User, {
-  foreignKey: "user_id"
-});
-
-Books.hasMany(UserBooks, {
+Books.belongsToMany(User, {
   foreignKey: "books_id",
-  onDelete: "CASCADE"
+  through: {
+    model: UserBooks,
+    unique: false,
+  },
 });
-
-UserBooks.belongsTo(Books, {
-  foreignKey: "books_id",
-})
 
 module.exports = { User, Books, UserBooks };
