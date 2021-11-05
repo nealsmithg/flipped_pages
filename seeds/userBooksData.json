@@ -1,0 +1,92 @@
+[
+  {
+    "books_id": 1,
+    "user_id": 1,
+    "read": false,
+    "own": true,
+    "heard_about": "From a friend"
+  },
+  {
+    "books_id": 2,
+    "user_id": 2,
+    "read": true,
+    "own": false,
+    "heard_about": "At work"
+  },
+  {
+    "books_id": 8,
+    "user_id": 3,
+    "read": false,
+    "own": false,
+    "want": true
+  },
+  {
+    "books_id": 10,
+    "user_id": 1,
+    "read": false,
+    "own": false,
+    "want": true,
+    "heard_about": "Can't remember"
+  },
+  {
+    "books_id": 7,
+    "user_id": 1,
+    "read": true,
+    "own": true
+  },
+  {
+    "books_id": 5,
+    "user_id": 3,
+    "read": false,
+    "own": true,
+    "heard_about": "Saw it online"
+  },
+  {
+    "books_id": 4,
+    "user_id": 2,
+    "read": false,
+    "own": false,
+    "want": true,
+    "heard_about": "Saw on tv"
+  },
+  {
+    "books_id": 8,
+    "user_id": 1,
+    "read": false,
+    "own": true,
+    "heard_about": "From a friend"
+  },
+  {
+    "books_id": 9,
+    "user_id": 2,
+    "read": false,
+    "own": false,
+    "want": true
+  },
+  {
+    "books_id": 6,
+    "user_id": 1,
+    "read": true,
+    "own": true
+  },
+  {
+    "books_id": 3,
+    "user_id": 1,
+    "read": false,
+    "own": true,
+    "heard_about": "Got it from my mother"
+  },
+  {
+    "books_id": 5,
+    "user_id": 2,
+    "read": false,
+    "own": true
+  },
+  {
+    "books_id": 7,
+    "user_id": 2,
+    "read": false,
+    "own": true,
+    "heard_about": "From my brother"
+  }
+]
