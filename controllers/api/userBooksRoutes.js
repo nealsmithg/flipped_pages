@@ -46,4 +46,19 @@ router.post("/", (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const userBookData = await UserBooks.destroy({
+      where: { books_id: req.params.id, user_id: req.session.user_id },
+    });
+    if (!userBookData) {
+      res.status(404).json({ message: "No book/user by that ID." });
+      return;
+    }
+    res.status(200).json(userBookData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
