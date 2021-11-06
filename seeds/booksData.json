@@ -4,21 +4,21 @@
     "author": "Herman Melville",
     "pages": 927,
     "description": "Moby-Dick; or, The Whale is an 1851 novel by American writer Herman Melville. The book is the sailor Ishmael's narrative of the obsessive quest of Ahab, captain of the whaling ship Pequod, for revenge on Moby Dick, the giant white sperm whale that on the ship's previous voyage bit off Ahab's leg at the knee.",
-    "image": null
+    "image": "http://books.google.com/books/content?id=La1ASAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
   },
   {
     "name": "Of Mice and Men",
     "author": "John Steinbeck",
     "pages": 107,
     "description": "Of Mice and Men is a novella written by John Steinbeck. Published in 1937, it narrates the experiences of George Milton and Lennie Small, two displaced migrant ranch workers, who move from place to place in California in search of new job opportunities during the Great Depression in the United States.",
-    "image": null
+    "image": "http://books.google.com/books/content?id=BiJiRgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
   },
   {
     "name": "A Tale of Two Cities",
     "author": "Charles Dickens",
     "pages": 448,
     "description": "A Tale of Two Cities is an 1859 historical novel by Charles Dickens, set in London and Paris before and during the French Revolution.",
-    "image": null
+    "image": "http://books.google.com/books/content?id=JyGxxgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
   },
   {
     "name": "Battle royal",
@@ -32,7 +32,7 @@
     "author": "Chuck Palahniuk",
     "pages": 304,
     "description": "Choke is a 2001 novel by American author Chuck Palahniuk. The story focuses on Victor, a sex addict, and con man. He also works at a colonial reenactment museum. The novel was later adapted for film by Clark Gregg.",
-    "image": null
+    "image": "http://books.google.com/books/content?id=_H-mz4TopZ4C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
   },
   {
     "name": "Ender's Game",
@@ -53,20 +53,20 @@
     "author": "Rrank Herbert",
     "pages": 412,
     "description": "Dune is a 1965 science fiction novel by American author Frank Herbert, originally published as two separate serials in Analog magazine. It tied with Roger Zelazny's This Immortal for the Hugo Award in 1966 and it won the inaugural Nebula Award for Best Novel.",
-    "image": null
+    "image": "http://books.google.com/books/content?id=ryot4Ag2GGQC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
   },
   {
     "name": "Odyssey",
     "author": "Homer",
     "pages": 752,
     "description": "The Odyssey is one of two major ancient Greek epic poems attributed to Homer. It is one of the oldest extant works of literature still read by contemporary audiences. As with the Iliad, the poem is divided into 24 books. It follows the Greek hero Odysseus, king of Ithaca, and his journey home after the Trojan War.",
-    "image": null
+    "image": "http://books.google.com/books/content?id=udcwDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
   },
   {
     "name": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "pages": 152,
     "description": "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan.",
-    "image": null
+    "image": "http://books.google.com/books/content?id=eaLjDeMV_WsC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
   }
 ]
