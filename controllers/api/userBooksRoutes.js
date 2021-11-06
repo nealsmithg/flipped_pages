@@ -46,6 +46,17 @@ router.post("/", (req, res) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  try {
+    const newUserBooks = await UserBooks.update(req.body, {
+      where: { user_id: req.session.user_id, books_id: req.params.id },
+    });
+    res.status(200).json(newUserBooks);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.delete("/:id", async (req, res) => {
   try {
     const userBookData = await UserBooks.destroy({
