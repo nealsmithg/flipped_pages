@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Test</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Flipped Pages</h1>
+      </header>
+      <nav>
+        <a href="/">Home</a>
+        <!-- If the user is logged in, show a logout button -->
+        {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <!-- Otherwise, show a link to login -->
+        <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+      <main>
+        <aside>
+          <h2>Enjoy the galleries!</h2>
+        </aside>
+        <div class="gallery">
+          {{{body}}}
+        </div>
+      </main>
+      <!-- If the user is logged in, load the JS script for when they logout -->
+      {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+      {{/if}}
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/5.0.0-beta.5/index.js" integrity="sha512-uKxirna7d5STmVXEMQYBVRW1nERrqHjwOubv4QcK4oYaaifLiEnN/aLIJxVsyK4R1K+awpNIG73RaQfT1DZ8ew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>
