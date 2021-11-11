@@ -44,7 +44,7 @@ router.get("/mybooks", async (req, res) => {
   }
 });
 
-render.get("/newbook", async (req, res) => {
+router.get("/newbook", async (req, res) => {
   res.render("newbook");
 });
 
