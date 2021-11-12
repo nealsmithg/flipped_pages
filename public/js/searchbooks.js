@@ -1,5 +1,12 @@
 $(document).ready(function () {
-  var item, tile, author, publisher, bookLink, bookImg;
+  var item,
+    title,
+    author,
+    publisher,
+    bookLink,
+    bookImg,
+    publishedDate,
+    pageCount;
   var outputList = document.getElementById("list-output");
   var bookUrl = "https://www.googleapis.com/books/v1/volumes?q=";
   // var apiKey = "key=AIzaSyDtXC7kb6a7xKJdm_Le6_BYoY5biz6s8Lw";
@@ -44,7 +51,9 @@ $(document).ready(function () {
       author1 = item.volumeInfo.authors;
       publisher1 = item.volumeInfo.publisher;
       bookLink1 = item.volumeInfo.previewLink;
-      bookIsbn = item.volumeInfo.industryIdentifiers[1].identifier;
+      bookIsbn = item.volumeInfo.industryIdentifiers[0].identifier;
+      publishedDate = item.volumeInfo.publishedDate;
+      pageCount = item.volumeInfo.pageCount;
       bookImg1 = item.volumeInfo.imageLinks
         ? item.volumeInfo.imageLinks.thumbnail
         : placeHldr;
@@ -54,7 +63,9 @@ $(document).ready(function () {
       author2 = item2.volumeInfo.authors;
       publisher2 = item2.volumeInfo.publisher;
       bookLink2 = item2.volumeInfo.previewLink;
-      bookIsbn2 = item2.volumeInfo.industryIdentifiers[1].identifier;
+      bookIsbn2 = item2.volumeInfo.industryIdentifiers[0].identifier;
+      publishedDate2 = item.volumeInfo.publishedDate;
+      pageCount2 = item.volumeInfo.pageCount;
       bookImg2 = item2.volumeInfo.imageLinks
         ? item2.volumeInfo.imageLinks.thumbnail
         : placeHldr;
@@ -67,7 +78,9 @@ $(document).ready(function () {
           author1,
           publisher1,
           bookLink1,
-          bookIsbn
+          bookIsbn,
+          publishedDate,
+          pageCount
         ) +
         formatOutput(
           bookImg2,
@@ -75,7 +88,9 @@ $(document).ready(function () {
           author2,
           publisher2,
           bookLink2,
-          bookIsbn2
+          bookIsbn2,
+          publishedDate2,
+          pageCount2
         ) +
         "</div>";
 
@@ -83,9 +98,19 @@ $(document).ready(function () {
     }
   }
 
-  function formatOutput(bookImg, title, author, publisher, bookLink, bookIsbn) {
+  function formatOutput(
+    bookImg,
+    title,
+    author,
+    publisher,
+    bookLink,
+    bookIsbn,
+    publishedDate,
+    pageCount
+  ) {
     // console.log(title + ""+ author +" "+ publisher +" "+ bookLink+" "+ bookImg)
-    var viewUrl = "searchbooks?isbn=" + bookIsbn;
+
+    var viewUrl = "bookresult?isbn=" + bookIsbn;
     var htmlCard = `<div class="col-lg-6">
          <div class="card" style="">
            <div class="row no-gutters">
@@ -97,6 +122,9 @@ $(document).ready(function () {
                  <h5 class="card-title">${title}</h5>
                  <p class="card-text">Author: ${author}</p>
                  <p class="card-text">Publisher: ${publisher}</p>
+                 <p class="car-text"> Published Date: ${publishedDate}</p>
+                 <p class="car-text"> Page Count: ${pageCount}</p>
+
                  <a target="_blank" href="${viewUrl}" class="btn btn-secondary">Read Book</a>
                </div>
              </div>
