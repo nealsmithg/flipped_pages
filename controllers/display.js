@@ -5,7 +5,7 @@ router.get("/", async (req, res) => {
   try {
     // api search for books for display carousel
 
-    res.render("home", {
+    res.render("login", {
       // data from api
     });
   } catch (err) {
@@ -15,6 +15,10 @@ router.get("/", async (req, res) => {
 
 router.get("/login", async (req, res) => {
   res.render("login");
+});
+
+router.get("/searchbook", async (req, res) => {
+  res.render("searchbook");
 });
 
 router.get("/signup", async (req, res) => {
