@@ -5,8 +5,11 @@ router.get("/", async (req, res) => {
   try {
     // api search for books for display carousel
 
-    res.render("home", {
+    const booksData = await Books.findAll({ attributes: { exclude: "pages" } });
+    const allBooks = booksData.map((book) => book.get({ plain: true }));
+    res.render("homepage", {
       // data from api
+      allBooks,
     });
   } catch (err) {
     res.status(500).json(err);
