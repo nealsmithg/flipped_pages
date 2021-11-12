@@ -1,0 +1,15 @@
+<div class="container z-depth-3">
+    <div class="carousel">
+
+        {{#each books as |book| }}
+        <a class="carousel-item" href="#"><img class="z-depth-5" src="{{book.image}}">
+            <div class="image-overlay">
+                <div>{{book.description}}</div>
+            </div>
+            <h5>{{book.name}}</h5>
+            <p>By: <span id="author-name-1">{{book.author}}</span></p>
+        </a>
+        {{/each}}
+
+    </div>
+</div>
