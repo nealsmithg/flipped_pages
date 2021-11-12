@@ -1,5 +1,5 @@
 {
-  "name": "crowd-funding",
+  "name": "Flipped Pages",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,7 +9,7 @@
     "seed": "node seeds/seed.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hardik Rola, Jennifer Liebelt, Naomi Smith, Neal Smith ",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
