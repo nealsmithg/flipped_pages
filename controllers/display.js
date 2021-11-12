@@ -25,6 +25,13 @@ router.get("/signup", async (req, res) => {
   res.render("signup");
 });
 
+router.get("/searchbooks", async (req, res) => {
+  res.render("searchbooks");
+});
+
+router.get("/bookresult", async (req, res) => {
+  res.render("bookresult");
+});
 router.get("/about", async (req, res) => {
   res.render("about");
 });
