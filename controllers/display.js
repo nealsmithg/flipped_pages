@@ -7,6 +7,7 @@ router.get("/", async (req, res) => {
 
     const booksData = await Books.findAll({ attributes: { exclude: "pages" } });
     const allBooks = booksData.map((book) => book.get({ plain: true }));
+    console.log(allBooks);
     res.render("homepage", {
       // data from api
       allBooks,

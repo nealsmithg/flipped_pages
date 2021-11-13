@@ -1,16 +1,27 @@
 {
-  "name": "Flipped Pages",
+  "name": "flipped_pages",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/seed.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nealsmithg/flipped_pages.git"
+  },
   "keywords": [],
-  "author": "Hardik Rola, Jennifer Liebelt, Naomi Smith, Neal Smith ",
+  "author": "Hardik Rola",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nealsmithg/flipped_pages/issues"
+  },
+  "homepage": "https://github.com/nealsmithg/flipped_pages#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
