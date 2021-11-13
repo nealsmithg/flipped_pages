@@ -16,14 +16,11 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace("/");
     } else {
-      alert(response.statusText);
+      alert(`Incorrect email or password!!`);
     }
   }
 };
 
-
-
 document
   .querySelector(".login-form")
   .addEventListener("submit", loginFormHandler);
-
