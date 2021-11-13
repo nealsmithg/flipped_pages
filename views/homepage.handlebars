@@ -1,11 +1,11 @@
 <div class="container z-depth-3">
   <div class="carousel">
-
-    {{#each allBooks as |book|}}
+    
+    {{#each allBooks as |book| }}
       <a class="carousel-item" href="#">
           <img class="z-depth-5" src="{{book.image}}"/>
         <div class="image-overlay">
-          <div class="truncate">{{book.description}}</div>
+          <div>{{book.description}}</div>
         </div>
         <h5>{{book.name}}</h5>
         <p>By: 
@@ -13,14 +13,14 @@
         </p>
       </a>
     {{/each}}
-    <h5 class="center-align">
-      <button
-        class="btn waves-effect waves-light pulse"
-        type="submit"
-        name="action"
-      >
-        <i class="material-icons right pulse">Get Started</i>
-      </button>
-    </h5>
   </div>
+</div>
+<div class="center-align">
+  <button
+    class="btn waves-effect waves-light pulse"
+    type="submit"
+    name="action"
+  >
+    <i class="material-icons right pulse">Get Started</i>
+  </button>
 </div>
