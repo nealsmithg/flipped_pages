@@ -15,7 +15,8 @@
     />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
-    <title>Document</title>
+    <title>Flipped Pages</title>
+    <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico" />
   </head>
   <body>
     <header>
@@ -25,8 +26,14 @@
         <div class="nav-wrapper blue-grey darken-3">
           <a href="/" class="brand-logo">Flipped Pages</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/login">Sign In</a></li>
-            <li><a href="Books">Books</a></li>
+            {{! <li><a href="/login">Sign In</a></li> }}
+            <li>{{#if logged_in}}
+                <a href="/" id="logout">Logout</a>
+                <li><a href="Books">Books</a></li>
+              {{else}}
+                <a href="/login">Sign in</a>
+              {{/if}}
+            </li>
             <li><a href="/signup">Create Account</a></li>
             <li><a href="/searchbooks">Search Books</a></li>
           </ul>
@@ -38,50 +45,50 @@
       {{{body}}}
     </p>
 
-    <footer>
+    <footer class="page-footer blue-grey darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text"></h5>
+            <p class="grey-text text-lighten-4">Find out more about us, get in
+              touch with us.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
 
-      <footer class="page-footer blue-grey darken-3">
+              <li><a
+                  class="grey-text text-lighten-3"
+                  href="views/about.handlebars"
+                >About</a></li>
+              <li><a
+                  class="grey-text text-lighten-3"
+                  href="./views/contact.handlebars"
+                >Contact</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
         <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text"></h5>
-              <p class="grey-text text-lighten-4">Find out more about us, get in
-                touch with us.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-
-                <li><a
-                    class="grey-text text-lighten-3"
-                    href="views/about.handlebars"
-                  >About</a></li>
-                <li><a
-                    class="grey-text text-lighten-3"
-                    href="./views/contact.handlebars"
-                  >Contact</a></li>
-
-              </ul>
-            </div>
-          </div>
+          © 2014 Copyright Text
         </div>
-        <div class="footer-copyright">
-          <div class="container">
-            © 2014 Copyright Text
-          </div>
-        </div>
-      </footer>
-      <script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
-      ></script>
-      <script src="./public/js/homepage.js"></script>
-      <!-- Materialize import -->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    ></script>
+    <script src="./public/js/homepage.js"></script>
+    <!-- Materialize import -->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    {{#if logged_in}}
+      <script src="./js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
