@@ -5,12 +5,15 @@ router.get("/", async (req, res) => {
   try {
     // api search for books for display carousel
 
-    const booksData = await Books.findAll({ attributes: { exclude: "pages" } });
+    const booksData = await Books.findAll({
+      attributes: { exclude: "pages" },
+      limit: 10,
+    });
     const allBooks = booksData.map((book) => book.get({ plain: true }));
-    console.log(allBooks);
     res.render("homepage", {
       // data from api
       allBooks,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -18,6 +21,10 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/login", async (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
   res.render("login");
 });
 
