@@ -2,18 +2,18 @@
   <div class="carousel">
 
     {{#each allBooks as |book|}}
-      <a class="carousel-item" href="#"><img
-          class="z-depth-5"
-          src="{{book.image}}"
-        />
+      <a class="carousel-item" href="#">
+          <img class="z-depth-5" src="{{book.image}}"/>
         <div class="image-overlay">
-          <div>{{book.description}}</div>
+          <div class="truncate">{{book.description}}</div>
         </div>
         <h5>{{book.name}}</h5>
-        <p>By: <span id="author-name-1">{{book.author}}</span></p>
+        <p>By: 
+            <span>{{book.author}}</span>
+        </p>
       </a>
     {{/each}}
-    <h5 class="center-align" ,>
+    <h5 class="center-align">
       <button
         class="btn waves-effect waves-light pulse"
         type="submit"
