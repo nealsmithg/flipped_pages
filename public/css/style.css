@@ -27,6 +27,7 @@ body {
 .container {
   margin-top: 10%;
   margin-bottom: 10%;
+
 }
 
 .carousel {
@@ -71,7 +72,7 @@ body {
   backdrop-filter: blur(5px);
 }
 
-.image-overlay > * {
+.image-overlay>* {
   transform: translateY(20px);
   transition: transform 0.25s;
 }
@@ -80,7 +81,7 @@ body {
   opacity: 1;
 }
 
-.image-overlay:hover > * {
+.image-overlay:hover>* {
   transform: translateY(0);
 }
 
@@ -94,6 +95,12 @@ body {
   margin-top: 50px;
   visibility: hidden;
 }
+
+/* Login and Sign up  */
+.login-card {
+  border-radius: 20px;
+}
+
 
 main {
   flex: 1 0 auto;
