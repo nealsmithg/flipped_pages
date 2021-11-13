@@ -24,7 +24,7 @@ body {
 .container {
     margin-top: 10%;
     margin-bottom: 10%;
-    
+
 }
 
 .carousel {
@@ -68,7 +68,7 @@ body {
     backdrop-filter: blur(5px);
 }
 
-.image-overlay > * {
+.image-overlay>* {
     transform: translateY(20px);
     transition: transform 0.25s;
 }
@@ -77,11 +77,17 @@ body {
     opacity: 1;
 }
 
-.image-overlay:hover > * {
+.image-overlay:hover>* {
     transform: translateY(0);
 }
 
 .book-description {
     font-size: 1.25em;
     margin-top: 0.25em;
+}
+
+/* BOOK RESULT  */
+.book-list {
+    margin-top: 50px;
+    visibility: hidden;
 }
