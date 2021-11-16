@@ -39,13 +39,12 @@ const newBookHandler = async (event) => {
           headers: { "content-type": "application/json" },
         });
         if (postResponse.ok) {
-          document.location.replace("/");
+          document.location.replace("/userpage");
         } else {
           aleart("Unable to add book");
         }
       }
     });
-    document.location.replace("/");
   }
 };
 
