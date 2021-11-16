@@ -41,7 +41,7 @@ router.get("/bookresult", async (req, res) => {
 });
 
 router.get("/forms", async (req, res) => {
-  res.render("forms");
+  res.render("forms", { logged_in: req.session.logged_in });
 });
 router.get("/about", async (req, res) => {
   res.render("about");
