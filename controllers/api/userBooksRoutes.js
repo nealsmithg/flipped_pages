@@ -12,6 +12,18 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/user", async (req, res) => {
+  try {
+    const userBooksData = await User.findAll({
+      where: { id: req.session.user_id },
+      include: [{ model: Books, through: UserBooks }],
+    });
+    res.status(200).json(userBooksData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/:id", async (req, res) => {
   try {
     const userBooksData = await User.findByPk(req.params.id, {
