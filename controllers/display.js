@@ -58,13 +58,13 @@ router.get("/contact", async (req, res) => {
 
 router.get("/userpage", async (req, res) => {
   try {
-    const userBooksData = await User.findAll({
-      include: [{ model: Books, through: UserBooks }],
-      where: { id: req.session.user_id },
+    const userBooksData = await Books.findAll({
+      include: [
+        { model: User, through: UserBooks, where: { id: req.session.user_id } },
+      ],
     });
 
     const userBooks = userBooksData.map((book) => book.get({ plain: true }));
-
     res.render("userpage", { userBooks, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
