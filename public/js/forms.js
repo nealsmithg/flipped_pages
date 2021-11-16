@@ -45,7 +45,7 @@ const newBookHandler = async (event) => {
         }
       }
     });
-    document.location.replace("/");
+    alert("Please enter a book in our database.");
   }
 };
 
