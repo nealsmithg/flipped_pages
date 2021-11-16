@@ -2,7 +2,7 @@
 *Daniel Peterman*,
 *Jennifer Liebelt*,
 *Hardik Rola*,
-*Naomi Smith*   
+*Naomi Smith*,
 *Neal Smith*
   
 
