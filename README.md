@@ -23,6 +23,7 @@
 ![Flipped Pages screenshot](public/images/LoadingPage.png)
 ![Flipped Pages screenshot](public/images/CreateAccount.png)
 ![Flipped Pages screenshot](public/images/SearchBooks.png)
+![Flipped Pages screenshot](public/images/Library.png)
 
 ## Contact 
  ***Please feel free to email us or visit our project repository*** 
