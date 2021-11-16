@@ -1,0 +1,94 @@
+<nav>
+    <div class="nav-wrapper">
+        {{#each }}
+         <h3 class="brand-logo"><span>{{user.name}}</span>'s Library</h3>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#owned">Own</a></li>
+            <li><a href="#wishlist">Wishlist</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container z-depth-3">
+    
+    <!-- Reader's Owned collection -->
+    <ul class="collection with-header">
+
+        <li class="collection-header">
+            <h4 id="owned">Owned Books</h4>
+        </li>
+
+        <ul class="collection with-header">
+
+            <li class="collection-header">
+                <h5>Read</h5>
+            </li>
+            {{#each userBooks as |book| }}
+                {{#if blah}}
+                    <li class="collection-item avatar">
+                        <img src="{{book.image}}" alt="" class="circle">
+                        <span class="title">{{book.name}}</span>
+                        <p>
+                            {{book.author}}
+                        </p>
+                    </li>
+                {{/if}}
+            {{/each}}
+            <li class="collection-header">
+                <h5>Unread</h5>
+            </li>
+  
+            <li class="collection-item avatar">
+                <img src="{{book.image}}" alt="" class="circle">
+                <span class="title">{{book.name}}</span>
+                <p>
+                    {{book.author}}
+                </p>
+                <a class="waves-effect waves-light btn-floating secondary-content"><i class="material-icons">add_circle</i>
+                </a>
+            </li>
+  
+        </ul>
+
+    </ul>
+
+    <!-- User's Wishlist -->
+    <ul class="collection with-header">
+
+        <li class="collection-header">
+            <h4 id="wishlist">Wishlist</h4>
+        </li>
+
+        <ul class="collection with-header">
+
+            <li class="collection-header">
+                <h5>Read</h5>
+            </li>
+  
+            <li class="collection-item avatar">
+                <img src="{{book.image}}" alt="" class="circle">
+                <span class="title">{{book.name}}</span>
+                <p>
+                    {{book.author}}
+                </p>
+            </li>
+
+            <li class="collection-header">
+                <h5>Unread</h5>
+            </li>
+  
+            <li class="collection-item avatar">
+                <img src="{{book.image}}" alt="" class="circle">
+                <span class="title">{{book.name}}</span>
+            <p>
+                    {{book.author}}
+            </p>
+                <a class="waves-effect waves-light btn-floating secondary-content"><i class="material-icons">add_circle</i></a>
+            </li>
+  
+        </ul>
+
+    </ul>
+
+  </div>

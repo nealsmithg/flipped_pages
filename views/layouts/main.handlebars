@@ -7,6 +7,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
     <title>Flipped Pages</title>
@@ -18,11 +21,15 @@
       <nav>
 
         <div class="nav-wrapper blue-grey darken-3">
-          <a href="/" class="brand-logo">Flipped Pages</a>
+          <a href="/" class="brand-logo"><label><img
+            class="logo"
+                src="/images/flipped_pages_logo.png"
+                alt="Flipped Pages"
+              /></label></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li>{{#if logged_in}}
                 <a href="/" id="logout">Logout</a>
-                <li><a href="/forms">My Books</a></li>
+                <li><a href="/userpage">My Books</a></li>
               {{else}}
                 <a href="/login">Sign in</a>
               {{/if}}
@@ -36,9 +43,9 @@
     </header>
     <main>
 
-      <p>
+      
         {{{body}}}
-      </p>
+      
     </main>
     <footer class="page-footer blue-grey darken-3">
 
@@ -52,8 +59,18 @@
 
           </ul>
         </div>
-      </nav>
-
+      </footer>
+      <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      ></script>
+      <script src="/js/homepage.js"></script>
+      <!-- Materialize import -->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"

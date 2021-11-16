@@ -105,3 +105,11 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.logo {
+
+  width: 60px;
+  height: 55px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
