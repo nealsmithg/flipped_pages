@@ -43,15 +43,20 @@ router.get("/bookresult", async (req, res) => {
 router.get("/forms", async (req, res) => {
   res.render("forms", { logged_in: req.session.logged_in });
 });
+
 router.get("/about", async (req, res) => {
-  res.render("about");
+  res.render("about", {
+    logged_in: req.session.logged_in,
+  });
 });
 
 router.get("/contact", async (req, res) => {
-  res.render("contact");
+  res.render("contact", {
+    logged_in: req.session.logged_in,
+  });
 });
 
-router.get("/mybooks", async (req, res) => {
+router.get("/userpage", async (req, res) => {
   try {
     const userBooksData = await User.findAll({
       include: [{ model: Books, through: UserBooks }],
@@ -60,7 +65,7 @@ router.get("/mybooks", async (req, res) => {
 
     const userBooks = userBooksData.map((book) => book.get({ plain: true }));
 
-    res.render("mybooks", { userBooks });
+    res.render("userpage", { userBooks, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
