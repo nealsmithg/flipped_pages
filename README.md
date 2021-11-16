@@ -2,7 +2,7 @@
 
 *Daniel Peterman*, *Jennifer Liebelt*, *Hardik Rola*, *Naomi Smith*, *Neal Smith*
 
-[Live webpage]()
+[Live webpage](https://obscure-beach-36412.herokuapp.com/)
   
 
  
@@ -20,10 +20,13 @@
 - Express.js - Node.js Framework
 
 ## Usage
-<!-- DEMOS  -->
-<!-- ![code refactor screenshot]() or Live Screen view  -->
+![Flipped Pages screenshot](public/images/LoadingPage.png)
+![Flipped Pages screenshot](public/images/CreateAccount.png)
+![Flipped Pages screenshot](public/images/SearchBooks.png)
 
 ## Contact 
+ ***Please feel free to email us or visit our project repository*** 
+
 <a href="mailto:flipped.pages.books@gmail.com"> Email</a>
 
 [Flipped Pages repository](https://github.com/nealsmithg/flipped_pages)
