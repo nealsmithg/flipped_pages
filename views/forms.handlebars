@@ -3,45 +3,46 @@
     <div class="card">
       <div class="card-content">
 
-        <form>
-          <div class="row">
+        <form class="form new-book-form">
+          <div class="row form-group">
             <div class="input-field col s12">
-              <input placeholder="Search..." id="firstname" type="text" class="validate">
+              <input placeholder="Search..." id="book-title" type="text" class="validate autocomplete">
               <label for="firstname" class="active">Book Title:</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <p>
-                <label>
-                  <input type="checkbox" class="filled-in"/>
+              <p class="form-group">
+                <label for="read">
+                  <input type="checkbox" id="read"/>
                   <span>Read</span>
                 </label>
               </p>
-              <p>
-                <label>
-                  <input type="checkbox" class="filled-in"/>
+              <p class="form-group">
+                <label for="owned">
+                  <input type="checkbox" id="owned"/>
                   <span>Owned</span>
                 </label>
               </p>
-              <p>
-                <label>
-                  <input type="checkbox" class="filled-in"/>
-                  <span>Wishlist</span>
+              <p class="form-group">
+                <label for="want">
+                  <input type="checkbox" id="want"/>
+                  <span>Need to buy</span>
                 </label>
               </p>
-              <p>
+              <p class="form-group">
                 <div class="input-field col s6">
-                  <input placeholder="How did you hear about this book?" id="heard_about" type="text" class="validate">
+                  <input placeholder="How did you hear about this book?" id="heard-about" type="text" class="validate">
                 </div>
               </p>
             </div>
           </div>
+            <div class="card-action center row center form-group" id="div">
+            <button type="submit" class="waves-effect waves-light btn-large #26a69a">Add Book</button>
+          </div>
         </form>
       </div>
-      <div class="card-action center" id="div" class="row center">
-        <a class="waves-effect waves-light btn-large #26a69a">Search</a>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -50,4 +51,4 @@
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
 
-<script src="controllers/api/userBooksRoutes.js"></script>
+<script src="./js/forms.js"></script>
