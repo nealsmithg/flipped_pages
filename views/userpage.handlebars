@@ -11,97 +11,90 @@
 
 <div class="container z-depth-3">
     {{#each userBooks as |book| }}
-    <!-- Reader's Owned collection -->
-    <ul class="collection with-header">
+        {{#if own}}
+            {{!-- Reader's Owned collection --}}
+            <ul class="collection with-header">
 
-        <li class="collection-header">
-            <h4 id="owned">Owned Books</h4>
-        </li>
+                <li class="collection-header">
+                    <h4 id="owned">Owned Books</h4>
+                </li>
+                {{#if read}}
+                    <ul class="collection with-header">
+                        {{!-- read list header --}}
+                        <li class="collection-header">
+                            <h5>Read</h5>
+                        </li>
 
-            {{#if own && read}}
-                <ul class="collection with-header">
-                    
-                    {{!-- read list header --}}
-                    <li class="collection-header">
-                        <h5>Read</h5>
-                    </li>
+                        {{!-- read list item --}}
+                        <li class="collection-item avatar">
+                            <img src="{{book.image}}" alt="" class="circle">
+                            <span class="title">{{book.name}}</span>
+                            <p>
+                                {{book.author}}
+                            </p>
+                        </li>
+                    </ul>
+                {{else}}
+                    <ul class="collection with-header">
+                        {{!-- unread list header --}}
+                        <li class="collection-header">
+                            <h5>Unread</h5>
+                        </li>
 
-                    {{!-- read list item --}}
-                    <li class="collection-item avatar">
-                        <img src="{{book.image}}" alt="" class="circle">
-                        <span class="title">{{book.name}}</span>
-                        <p>
-                            {{book.author}}
-                        </p>
-                    </li>
-                </ul>
-            {{/if}}
-        
-            {{#if own && !read}}
-                <ul>
-                    {{!-- unread list header --}}
-                    <li class="collection-header">
-                        <h5>Unread</h5>
-                    </li>
+                        {{!-- unread list item --}}
+                        <li class="collection-item avatar">
+                            <img src="{{book.image}}" alt="" class="circle">
+                            <span class="title">{{book.name}}</span>
+                            <p>
+                                {{book.author}}
+                            </p>
+                        </li>
+                    </ul>
+                {{/if}}
+            </ul>
+        {{else}}
+            {{!-- User's Wishlist --}}
+            <ul class="collection with-header">
 
-                    {{!-- unread list item --}}
-                    <li class="collection-item avatar">
-                        <img src="{{book.image}}" alt="" class="circle">
-                        <span class="title">{{book.name}}</span>
-                        <p>
-                            {{book.author}}
-                        </p>
-                    </li>
-                </ul>
-            {{/if}}
-    </ul>
+                <li class="collection-header">
+                    <h4 id="wishlist">Wishlist</h4>
+                </li>
+                {{#if read}}
+                    <ul class="collection with-header">
+                        {{!-- read list header --}}
+                        <li class="collection-header">
+                            <h5>Read</h5>
+                        </li>
 
-    {{!-- User's Wishlist --}}
-    <ul class="collection with-header">
+                        {{!-- read list item --}}
+                        <li class="collection-item avatar">
+                            <img src="{{book.image}}" alt="" class="circle">
+                            <span class="title">{{book.name}}</span>
+                            <p>
+                                {{book.author}}
+                            </p>
+                        </li>
+                    </ul>
 
-        <li class="collection-header">
-            <h4 id="wishlist">Wishlist</h4>
-        </li>
+                {{else}}
+                    <ul>
+                        {{!-- unread header line --}}
+                        <li class="collection-header">
+                            <h5>Unread</h5>
+                        </li>
 
-            {{#if !own && read}}
-                <ul class="collection with-header">
-
-                    {{!-- read list header --}}
-                    <li class="collection-header">
-                        <h5>Read</h5>
-                    </li>
-
-                    {{!-- read list item --}}
-                    <li class="collection-item avatar">
-                        <img src="{{book.image}}" alt="" class="circle">
-                        <span class="title">{{book.name}}</span>
-                        <p>
-                            {{book.author}}
-                    </p>
-                    </li>
-                </ul>
-            {{/if}}
-
-            {{#if !own && !read}}
-                <ul>
-                    {{!-- unread header line --}}
-                    <li class="collection-header">
-                        <h5>Unread</h5>
-                    </li>
-
-                    {{!-- unread list item --}}
-                    <li class="collection-item avatar">
-                        <img src="{{book.image}}" alt="" class="circle">
-                        <span class="title">{{book.name}}</span>
-                        <p>
-                            {{book.author}}
-                        </p>
-                    </li>
-                </ul>
-            {{/if}} 
-
-    </ul>
-
+                        {{!-- unread list item --}}
+                        <li class="collection-item avatar">
+                            <img src="{{book.image}}" alt="" class="circle">
+                            <span class="title">{{book.name}}</span>
+                            <p>
+                                {{book.author}}
+                            </p>
+                        </li>
+                    </ul>
+                {{/if}} 
+            </ul>
+        {{/if}}
     {{/each}}
 
 </div>
