@@ -25,7 +25,7 @@
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li>{{#if logged_in}}
                 <a href="/" id="logout">Logout</a>
-                <li><a href="Books">Books</a></li>
+                <li><a href="/forms">My Books</a></li>
               {{else}}
                 <a href="/login">Sign in</a>
               {{/if}}
@@ -37,40 +37,26 @@
       </nav>
 
     </header>
-    <p>
-      {{{body}}}
-    </p>
+    <main>
 
+      <p>
+        {{{body}}}
+      </p>
+    </main>
     <footer class="page-footer blue-grey darken-3">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text"></h5>
-            <p class="grey-text text-lighten-4">Find out more about us, get in
-              touch with us.</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
 
-              <li><a
-                  class="grey-text text-lighten-3"
-                  href="views/about.handlebars"
-                >About</a></li>
-              <li><a
-                  class="grey-text text-lighten-3"
-                  href="./views/contact.handlebars"
-                >Contact</a></li>
+      <nav>
+        <div class="nav-wrapper blue-grey darken-3">
+          <a href="#" class="brand-logo">Find out more about us, get in touch
+            with us.</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
 
-            </ul>
-          </div>
+          </ul>
         </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2014 Copyright Text
-        </div>
-      </div>
+      </nav>
+
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"

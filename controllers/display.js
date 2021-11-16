@@ -39,6 +39,10 @@ router.get("/searchbooks", async (req, res) => {
 router.get("/bookresult", async (req, res) => {
   res.render("bookresult");
 });
+
+router.get("/forms", async (req, res) => {
+  res.render("forms");
+});
 router.get("/about", async (req, res) => {
   res.render("about");
 });
